@@ -1,0 +1,5 @@
+{"results":[{"gender":"male","name":{"title":"mr","first":"robim","last":"peixoto"},"email":"robim.peixoto@example.com","nat":"BR"},
+{"gender":"female","name":{"title":"miss","first":"gül","last":"biçer"},"email":"gül.biçer@example.com","nat":"TR"},
+{"gender":"male","name":{"title":"mr","first":"georg","last":"strømstad"},"email":"georg.strømstad@example.com","nat":"NO"},
+{"gender":"female","name":{"title":"ms","first":"ida","last":"larsen"},"email":"ida.larsen@example.com","nat":"DK"},
+{"gender":"male","name":{"title":"mr","first":"ümit","last":"taşlı"},"email":"ümit.taşlı@example.com","nat":"TR"}]}
