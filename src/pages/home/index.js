@@ -3,16 +3,26 @@ import { SearchArea } from './style.js';
 import { Form } from 'antd';
 import 'antd/dist/antd.css';
 import RegistrationForm from './form.js';
-import { RegistWrapper } from './style.js';
+import Datepicker from './datepicker.js';
+import { RegistWrapper,
+		DateWrapper
+ } from './style.js';
 
 const WrappedRegistrationForm = Form.create()(RegistrationForm);
 
 class Home extends Component{
 	render(){
 		return(
-				<RegistWrapper>
-					<WrappedRegistrationForm />
-				</RegistWrapper>
+				<div>
+					<RegistWrapper>
+						<div className = "reginfo">注册信息</div>
+						<WrappedRegistrationForm />	
+					</RegistWrapper>
+					<DateWrapper>
+						<Datepicker />
+					</DateWrapper>
+				</div>
+				
 			)
 	}
 }
