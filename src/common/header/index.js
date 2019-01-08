@@ -6,6 +6,7 @@ import { HeaderWrapper,
      InputWrapper
 		} from './style.js';
 import Inputer from './input.js';
+import WrappedNormalLoginForm from './login.js';
 
 class Header extends Component {
   render() {
@@ -21,7 +22,8 @@ class Header extends Component {
             <NavItem className = 'right underline'>登录</NavItem>
           </Nav>	
           <Inputer />
-        </HeaderWrapper>     
+          <WrappedNormalLoginForm/>
+        </HeaderWrapper>
       </div>
     );
   }
