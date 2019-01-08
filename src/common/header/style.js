@@ -12,6 +12,7 @@ export const HeaderWrapper = styled.div`
 		float: right;
 		margin-top: 8px;
 		margin-right: 120px;
+		width: 20%;
 	}
 
 	.login-form {
@@ -36,9 +37,9 @@ export const HeaderWrapper = styled.div`
 		font-size: 20px;
 	}
 
-	.ant-input-affix-wrapper{
+	ant-form-item-children .ant-input-affix-wrapper{
 		float: left;
-		width: 30%;
+		width: 60%;
 		margin-left: 20px;
 	}
 
