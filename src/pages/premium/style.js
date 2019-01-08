@@ -1,29 +1,24 @@
 import styled from 'styled-components';
 
-export const Search = styled.input`
-	float: left;
-	width: 400px;
-	height:30px;
-	margin-left: 80px;
-	margin-top: 50px;
-	boder: 1px solid #ccc;
-`;
+export const InputWrapper = styled.div`
+	width: 350px;
+	margin-top: 60px;
+	margin-left: 50px;
 
-export const SearchButton = styled.button`
-	float: left;
-	width: 50px;
-	height: 36px;
-	margin-left: 10px;
-	margin-top: 50px;
-	border: 1px solid #ccc;
-	background: #bbb;
+	.ant-input{
+		height: 35px;
+	}
+
+	.ant-btn{
+		height: 35px;
+	}
 `;
 
 export const Container = styled.div`
 	float: left;
 	width: 500px;
 	height: 300px;
-	margin-top: 50px;
+	margin-top: 25px;
 	margin-left: 50px;
 	border: 1px solid #e8e8e8;
 	border-radius: 4px;

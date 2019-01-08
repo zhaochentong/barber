@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import { Search,
 		 SearchButton,
-		 List
+		 List,
+		 InputWrapper
  } from './style.js';
  import InfiniteListExample from './list.js';
  import Info from './card.js';
+ import Inputer from './input.js';
 
 class Premium extends Component{
 	render(){
 		return(
 			<div>
-				<Search></Search>
-				<SearchButton>搜索</SearchButton>
+				<InputWrapper>
+					<Inputer />
+				</InputWrapper>
 				<InfiniteListExample />
 				<Info />
 			</div>

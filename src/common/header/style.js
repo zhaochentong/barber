@@ -7,6 +7,12 @@ export const HeaderWrapper = styled.div`
 	height: 50px;
 	background: #fff;
 	border-bottom: 1px solid #f0f0f0;
+	.ant-input-search{
+		float: right;
+		margin-top: 8px;
+		margin-right: 120px;
+		width: 280px;
+	}
 `;
 
 export const Logo = styled.a`
@@ -56,30 +62,4 @@ export const NavItem = styled.a`
 		color: rgb(64,41,235);
 	}
 `;
-
-export const NavSearch = styled.input`
-	float: right;
-	width: 200px;
-	height: 25px;
-	margin-top: 9px;
-	margin-right: 10px;
-	padding-left: 3px;
-	border: 1px solid #ccc;
-`;
-
-export const NavButton = styled.button`
-	float: right;
-	width: 40px;
-	height: 28px;
-	margin-right: 50px;
-	margin-top: 9px;
-	text-align: center;
-	line-height: 25px;
-	line-height: 25px;
-	border: 1px solid #ccc;
-	font-size: 12px;
-	background: #bbb;
-	cursor: pointer;
-`
-
 

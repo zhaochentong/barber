@@ -3,9 +3,9 @@ import { HeaderWrapper,
 		 Logo,
      Nav,
 		 NavItem,
-     NavSearch,
-     NavButton
+     InputWrapper
 		} from './style.js';
+import Inputer from './input.js';
 
 class Header extends Component {
   render() {
@@ -19,10 +19,9 @@ class Header extends Component {
             <NavItem className = 'right underline'>注册</NavItem>
             <NavItem className = 'right'>/</NavItem>
             <NavItem className = 'right underline'>登录</NavItem>
-            <NavButton>搜&nbsp;索</NavButton>  
-            <NavSearch></NavSearch>   
           </Nav>	
-        </HeaderWrapper>
+          <Inputer />
+        </HeaderWrapper>     
       </div>
     );
   }
