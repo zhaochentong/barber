@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const InputWrapper = styled.div`
 	width: 350px;
-	margin-top: 60px;
+	margin-top: 95px;
 	margin-left: 50px;
 
 	.ant-input{

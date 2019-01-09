@@ -24,7 +24,7 @@ export const RegistWrapper = styled.div`
 	}
 
 	.reginfo{
-		margin-top: 50px;
+		margin-top: 95px;
 		margin-left: 220px;
 		font-size: 20px;
 		color: #333;
