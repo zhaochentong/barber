@@ -15,5 +15,11 @@ export default (state = defaultState, action) => {
 			popout: true
 		}
 	}
+
+	if(action.type === 'cover_click'){
+		return{
+			popout: false
+		}
+	}
 	return state;
 }
