@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Search,
-		 SearchButton,
-		 List,
-		 InputWrapper
+import { InputWrapper
  } from './style.js';
  import InfiniteListExample from './list.js';
  import Info from './card.js';

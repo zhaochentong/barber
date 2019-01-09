@@ -26,7 +26,6 @@ export const HeaderWrapper = styled.div`
 		padding: 15px 15px;
 		border: 1px solid #d9d9d9;
 		background: #fff;
-		display: none;
 	}
 
 	.login{
@@ -78,7 +77,6 @@ export const Cover = styled.div`
 	height: 100%;
 	background: #333;
 	opacity: 0.5;
-	display: none;
 `;
 
 export const Logo = styled.a`

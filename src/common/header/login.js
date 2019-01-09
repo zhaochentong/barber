@@ -4,7 +4,7 @@ import {
 } from 'antd';
 import {Cover} from './style';
 
-class NormalLoginForm extends React.Component {
+class NormalLoginForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -45,12 +45,12 @@ class NormalLoginForm extends React.Component {
             })(
               <Checkbox>Remember me</Checkbox>
             )}
-            <a className="login-form-forgot" href="">Forgot password</a>
+            <a className="login-form-forgot" href="https://www.baidu.com/">Forgot password</a>
             <Button type="primary" htmlType="submit" className="login-form-button">
               Log in
             </Button>
             <br/>
-            Or <a href="">register now!</a>
+            Or <a href="https://www.baidu.com/">register now!</a>
           </Form.Item>
         </Form>
       </div>

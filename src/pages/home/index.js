@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { SearchArea } from './style.js';
 import { Form } from 'antd';
 import 'antd/dist/antd.css';
 import RegistrationForm from './form.js';

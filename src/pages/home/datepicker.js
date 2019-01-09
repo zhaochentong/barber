@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 
-const { RangePicker } = DatePicker;
+// const { RangePicker } = DatePicker;
 
 function onChange(value, dateString) {
   console.log('Selected Time: ', value);

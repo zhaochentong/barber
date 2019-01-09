@@ -2,31 +2,85 @@ import React, { Component } from 'react';
 import { HeaderWrapper,
 		 Logo,
      Nav,
-		 NavItem,
-     InputWrapper
+		 NavItem
 		} from './style.js';
 import Inputer from './input.js';
 import WrappedNormalLoginForm from './login.js';
+import { connect } from 'react-redux';
+
+const showLogin = (show) => {
+  if(show){
+    return(
+      <WrappedNormalLoginForm />
+      );
+  }else{
+    return null;
+  }
+}
 
 class Header extends Component {
+
   render() {
     return (
       <div className="App">
         <HeaderWrapper>
         	<Logo href = '/' />
           <Nav>
-            <NavItem className = 'left active' href = '/'>首页</NavItem>
-            <NavItem className = 'left' href = '/premium'>会员</NavItem>
-            <NavItem className = 'right underline'>注册</NavItem>
+            <NavItem 
+              className = {this.props.focused ? 'left active':'left'}
+              // href = '/'
+              onClick = {this.props.handleClick}
+              >
+              首页
+            </NavItem>
+            <NavItem 
+              className = {this.props.focused ? 'left active':'left'} 
+              // href = '/premium'
+              onClick = {this.props.handleClick}>
+              会员
+            </NavItem>
+            <NavItem 
+              className = 'right underline'
+              >
+              注册
+            </NavItem>
             <NavItem className = 'right'>/</NavItem>
-            <NavItem className = 'right underline'>登录</NavItem>
+            <NavItem 
+              className = 'right underline'
+              onClick = {this.props.handleLoginClick}>
+              登录
+            </NavItem>
           </Nav>	
           <Inputer />
-          <WrappedNormalLoginForm/>
+          {showLogin(this.props.popout)}
         </HeaderWrapper>
       </div>
     );
   }
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+  return{
+    focused: state.focused,
+    popout: state.popout
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    handleClick(){
+      const action = {
+        type: 'item_click'
+      };
+      dispatch(action);
+    },
+    handleLoginClick(){
+      const action = {
+        type: 'login_click'
+      };
+      dispatch(action);
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Header);
