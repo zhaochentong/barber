@@ -27,15 +27,15 @@ class Header extends Component {
         	<Logo href = '/' />
           <Nav>
             <NavItem 
-              className = {this.props.focused ? 'left active':'left'}
-              // href = '/'
+              className = {this.props.home_title ? 'active left':'left'}
+              href = '/'
               onClick = {this.props.handleClick}
               >
               首页
             </NavItem>
             <NavItem 
-              className = {this.props.focused ? 'left active':'left'} 
-              // href = '/premium'
+              className = {this.props.premium_title ? 'active left' : 'left'}
+              href = '/premium'
               onClick = {this.props.handleClick}>
               会员
             </NavItem>
@@ -62,7 +62,9 @@ class Header extends Component {
 const mapStateToProps = (state) => {
   return{
     focused: state.focused,
-    popout: state.popout
+    popout: state.popout,
+    home_title: state.home_title,
+    premium_title: state.premium_title,
   }
 }
 

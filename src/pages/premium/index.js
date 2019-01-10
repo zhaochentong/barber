@@ -4,8 +4,14 @@ import { InputWrapper
  import InfiniteListExample from './list.js';
  import Info from './card.js';
  import Inputer from './input.js';
+ import { connect } from 'react-redux';
 
 class Premium extends Component{
+
+	componentWillMount(){
+		this.props.premiumHighLight();
+	}
+
 	render(){
 		return(
 			<div>
@@ -19,4 +25,21 @@ class Premium extends Component{
 	}
 }
 
-export default Premium;
+const mapStateToProps = (state) => {
+  return{
+    premium_title: state.premium_title,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    premiumHighLight(){
+    	const action = {
+    		type: 'premium_hightlight'
+    	}
+    	dispatch(action);
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Premium);
