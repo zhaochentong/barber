@@ -72,7 +72,7 @@ export const HeaderWrapper = styled.div`
 
 	.regist-form{
 		position: fixed;
-		top: 100px;
+		top: 80px;
 		left: 50%;
 		margin-left: -200px;
 		width: 400px;
