@@ -6,6 +6,7 @@ import { HeaderWrapper,
 		} from './style.js';
 import Inputer from './input.js';
 import WrappedNormalLoginForm from './login.js';
+import WrappedRegistrationForm from './regist.js';
 import { connect } from 'react-redux';
 
 const showLogin = (show) => {
@@ -53,6 +54,7 @@ class Header extends Component {
           </Nav>	
           <Inputer />
           {showLogin(this.props.popout)}
+          <WrappedRegistrationForm /> 
         </HeaderWrapper>
       </div>
     );

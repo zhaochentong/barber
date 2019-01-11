@@ -12,7 +12,7 @@ export const HeaderWrapper = styled.div`
 	.ant-input-search{
 		float: right;
 		margin-top: 8px;
-		margin-right: 120px;
+		margin-right: 200px;
 		width: 20%;
 	}
 
@@ -66,8 +66,40 @@ export const HeaderWrapper = styled.div`
 
 	.login-form-button{
 		width: 60%;
-		margin-top: 10px;
+		margin-top: 12px;
 		margin-left: 55px;
+	}
+
+	.regist-form{
+		position: fixed;
+		top: 100px;
+		left: 50%;
+		margin-left: -200px;
+		width: 400px;
+		height: 470px;
+		padding-top: 15px;
+		padding: 20px 12px 10px;
+		background: #fff;
+		border: 1px solid #d9d9d9;
+
+	}
+
+	.reg-info{
+		margin-bottom: 12px;
+	}
+
+	.reg-title{
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.ant-col-sm-8{
+		margin-right: 8px;
+	}
+
+	.ant-col-sm-16{
+		width: 60%;
 	}
 `;
 

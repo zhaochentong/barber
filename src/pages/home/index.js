@@ -20,7 +20,7 @@ class Home extends Component{
 		return(
 				<div>
 					<RegistWrapper>
-						<div className = "reginfo">注册信息</div>
+						<div className = "reginfo">会员注册</div>
 						<WrappedRegistrationForm />	
 					</RegistWrapper>
 					<DateWrapper>
