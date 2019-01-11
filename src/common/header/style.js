@@ -26,6 +26,7 @@ export const HeaderWrapper = styled.div`
 		padding: 15px 15px;
 		border: 1px solid #d9d9d9;
 		background: #fff;
+		z-index: 999;
 	}
 
 	.login{
@@ -81,7 +82,7 @@ export const HeaderWrapper = styled.div`
 		padding: 20px 12px 10px;
 		background: #fff;
 		border: 1px solid #d9d9d9;
-
+		z-index: 999;
 	}
 
 	.reg-info{
@@ -101,6 +102,23 @@ export const HeaderWrapper = styled.div`
 	.ant-col-sm-16{
 		width: 60%;
 	}
+
+	.ant-btn-primary{
+		background-color: #3F2AEB;
+		border-color: #3F2AEB;
+	}
+
+	.login-form-forgot{
+		color: #705FEC;
+	}
+
+	.a-font{
+		color: #705FEC;
+	}
+
+	.ant-checkbox::-webkit-selection{
+		background-color: #705FEC;
+	}
 `;
 
 export const Cover = styled.div`
@@ -109,6 +127,7 @@ export const Cover = styled.div`
 	height: 100%;
 	background: #333;
 	opacity: 0.5;
+	cursor: pointer;
 `;
 
 export const Logo = styled.a`
@@ -156,6 +175,10 @@ export const NavItem = styled.a`
 
 	&.active{
 		color: rgb(64,41,235);
+	}
+
+	&.a-font{
+		color: #705FEC;
 	}
 `;
 

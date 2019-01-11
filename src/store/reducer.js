@@ -1,6 +1,7 @@
 const defaultState = {
 	focused: false,
-	popout: false,
+	login_popout: false,
+	reg_popout: false,
 	home_title: false,
 	premium_title: false
 }
@@ -14,13 +15,13 @@ export default (state = defaultState, action) => {
 
 	if(action.type === 'login_click'){
 		return{
-			popout: true
+			login_popout: true
 		}
 	}
 
 	if(action.type === 'cover_click'){
 		return{
-			popout: false
+			login_popout: false
 		}
 	}
 
@@ -35,6 +36,20 @@ export default (state = defaultState, action) => {
 		return{
 			premium_title: true,
 			home_title: false
+		}
+	}
+
+	if(action.type === 'reg_click'){
+		return{
+			reg_popout: true,
+
+		}
+	}
+
+	if(action.type === 'cover_click'){
+		return{
+			login_popout: false,
+			reg_popout: false,
 		}
 	}
 	return state;

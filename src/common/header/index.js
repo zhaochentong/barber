@@ -7,12 +7,29 @@ import { HeaderWrapper,
 import Inputer from './input.js';
 import WrappedNormalLoginForm from './login.js';
 import WrappedRegistrationForm from './regist.js';
+import FormCover from './cover.js'
 import { connect } from 'react-redux';
 
 const showLogin = (show) => {
   if(show){
     return(
-      <WrappedNormalLoginForm />
+      <div>
+        <WrappedNormalLoginForm />
+        <FormCover />
+      </div>
+      );
+  }else{
+    return null;
+  }
+}
+
+const showReg = (show) => {
+  if(show){
+    return(
+      <div>
+        <WrappedRegistrationForm /> 
+        <FormCover />
+      </div>
       );
   }else{
     return null;
@@ -20,7 +37,6 @@ const showLogin = (show) => {
 }
 
 class Header extends Component {
-
   render() {
     return (
       <div className="App">
@@ -41,20 +57,22 @@ class Header extends Component {
               会员
             </NavItem>
             <NavItem 
-              className = 'right underline'
+              className = 'right underline a-font'
+              onClick = {this.props.handleRegClick}
               >
               注册
             </NavItem>
             <NavItem className = 'right'>/</NavItem>
             <NavItem 
-              className = 'right underline'
+              className = 'right underline a-font'
               onClick = {this.props.handleLoginClick}>
               登录
             </NavItem>
+
           </Nav>	
           <Inputer />
-          {showLogin(this.props.popout)}
-          <WrappedRegistrationForm /> 
+          {showLogin(this.props.login_popout)}
+          {showReg(this.props.reg_popout)}
         </HeaderWrapper>
       </div>
     );
@@ -64,7 +82,8 @@ class Header extends Component {
 const mapStateToProps = (state) => {
   return{
     focused: state.focused,
-    popout: state.popout,
+    login_popout: state.login_popout,
+    reg_popout: state.reg_popout,
     home_title: state.home_title,
     premium_title: state.premium_title,
   }
@@ -81,6 +100,18 @@ const mapDispatchToProps = (dispatch) => {
     handleLoginClick(){
       const action = {
         type: 'login_click'
+      };
+      dispatch(action);
+    },
+    handleRegClick(){
+      const action = {
+        type: 'reg_click'
+      };
+      dispatch(action);
+    },
+    handleCoverClick(){
+      const action = {
+        type: 'cover_click'
       };
       dispatch(action);
     }

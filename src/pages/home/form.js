@@ -147,7 +147,7 @@ class RegistrationForm extends Component {
           {getFieldDecorator('agreement', {
             valuePropName: 'checked',
           })(
-            <Checkbox>I have read the <a href="https://www.baidu.com/">agreement</a></Checkbox>
+            <Checkbox>I have read the <a href="https://www.baidu.com/" className = 'a-font'>agreement</a></Checkbox>
           )}
         </FormItem>
         <FormItem {...tailFormItemLayout}>

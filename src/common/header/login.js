@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Form, Icon, Input, Button, Checkbox,
 } from 'antd';
-import {Cover} from './style';
+// import {Cover} from './style';
 import { connect } from 'react-redux';
 
 class NormalLoginForm extends Component {
@@ -19,7 +19,7 @@ class NormalLoginForm extends Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <div>
-        <Cover onClick = {this.props.handleCoverClick}></Cover>
+        {/*<Cover onClick = {this.props.handleCoverClick}></Cover>*/}     
         <Form onSubmit={this.handleSubmit} className="login-form">
           <div className = 'login'>登录</div>
           <div className = 'user'>用户名</div>
@@ -51,7 +51,7 @@ class NormalLoginForm extends Component {
               Log in
             </Button>
             <br/>
-            Or <a href="https://www.baidu.com/">register now!</a>
+            Or <a href="https://www.baidu.com/" className = "a-font">register now!</a>
           </Form.Item>
         </Form>
       </div>
@@ -63,18 +63,18 @@ const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(NormalLogin
 
 const mapStateToProps = (state) => {
   return{
-    popout: state.popout
+    login_popout: state.login_popout
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    handleCoverClick(){
-      const action = {
-        type: 'cover_click'
-      };
-      dispatch(action);
-    }
+    // handleCoverClick(){
+    //   const action = {
+    //     type: 'cover_click'
+    //   };
+    //   dispatch(action);
+    // }
   }
 }
 

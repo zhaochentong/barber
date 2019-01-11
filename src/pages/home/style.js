@@ -30,6 +30,15 @@ export const RegistWrapper = styled.div`
 		color: #333;
 		font-weight: bold;
 	}
+
+	.ant-btn-primary{
+		background-color: #3F2AEB;
+		border-color: #3F2AEB;
+	}
+
+	.a-font{
+		color: #705FEC;
+	}
 `;
 
 export const DateWrapper = styled.div`
